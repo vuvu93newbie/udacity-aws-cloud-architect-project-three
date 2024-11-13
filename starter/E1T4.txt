@@ -1,5 +1,20 @@
 Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
 
 # Poor practice 1
+WebAppSG 
+- It permits ingress from port (22, 5000, 80). It should be 80 only.
+- It also permits egress all traffic ip and port. It should be restricted to the RecipeWebServiceInstance ip and port 5000.
+
 
 # Poor practice 2
+RecipeWebServiceInstance
+- It is using public subnet. AppLoadBalancer is in public already, so it can be in private subnet.
+
+# Poor practice 3
+S3BucketRecipesSecret
+- Versioning disabled. We should turn it on.
+- Encrypt disabled. We should turn it on.
+
+# Poor practice 4
+InstanceRolePolicy-C3
+- It allow all action to S3. We should apply the least privileage principle.

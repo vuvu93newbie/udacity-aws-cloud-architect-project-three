@@ -1,8 +1,13 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+- Add WWAF to enhance security from outside.
+- Move Web Service Instance to private subnet, using a NAT gateway in public subnet.
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- No, IAM permission issue should be fixed by updating policy. Moving S3 to VPC private cannot prevent unauthorized access.
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+- No, this function will apply for new objects.
 
 # What would happen if the original cloud formation templates are applied to this environment.
+- It will overrite all changes by CLI, Console.

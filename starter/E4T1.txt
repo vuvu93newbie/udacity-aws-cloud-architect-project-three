@@ -1,5 +1,9 @@
 
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+1. Allow SSH connection from known IP addresses.
+2. Should have password policy, to make password stronger.
+3. Install anti-frute force tool.
 
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Enable S3 encryption.

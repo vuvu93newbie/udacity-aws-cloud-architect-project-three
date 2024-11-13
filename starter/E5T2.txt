@@ -1,13 +1,27 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+- For CloudFormation, there is:
+    - Cfripper
+    - Cloudsploit
+    - cfn-lint
+
+- For Terraform, there is:
+    - Chef inspec
+    - Regula
+    - Terrascan
 
 ### Example vulnerability
+- Misconfigured Security Groups: An IaC template might create a security group with overly permissive rules, such as allowing inbound traffic from any IP address on all ports3.
 
-##Scan AMI’s or containers for OS vulnerabilities
+## Scan AMI’s or containers for OS vulnerabilities
+- Amazon Inspector
 
 ### Example vulnerability
+- Outdated software packages: Amazon Inspector can identify which EC2 instaces or container images are running outdated software.
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
+- Amazon Config.
 
 ### Example vulnerability
+- Public S3 Buckets: Misconfigured S3 buckets that are publicly accessible can expose sensitive data, leading to potential data breaches.

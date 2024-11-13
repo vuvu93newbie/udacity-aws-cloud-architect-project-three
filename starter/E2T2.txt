@@ -1,3 +1,9 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+1. AppLoadBalancer is not configured to redirect HTTP requests to HTTPS. (securityhub-alb-http-to-https-redirection-check-d18fe18d)
+2. EC2 has public IP address. (securityhub-ec2-instance-no-public-ip-6bdc4284)
+3. S3 Bucket doesn't has server access logging. (securityhub-s3-bucket-logging-enabled-dbd1710c)
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+1. Limit traffic to ALB.
+2. Move EC2 to private subnet.
+3. Enable tracking access requests to S3 bucket.
